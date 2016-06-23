@@ -1,0 +1,13 @@
+var wordWrap = function (str) {
+  var strArr = str.split("");
+  var index  = 0;
+  console.log(strArr)
+  while (index < strArr.length){
+    if (index && index % 25 === 0){
+      strArr[index-1] === " " || strArr[index] === " " ? strArr.splice(index,0,"\n"):strArr.splice(index-1,0,"-\n");
+    }
+    index++;
+  }
+  return strArr.join('');
+};
+module.exports = wordWrap
